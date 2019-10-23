@@ -67,7 +67,7 @@ function loadHeader(index) {
       $(this).find('dl').stop().slideDown();
     });
 
-    $("#_header").on("mouseout", ".nav-right li", function () {
+    $("#_header").on("mouseout", ".nav-right", function () {
       $(".nav-right li").find('dl').stop().slideUp();
     });
     

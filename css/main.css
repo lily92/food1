@@ -315,6 +315,11 @@ img {
   color: #c51f21;
 }
 
+.header nav ul li.active dd a {
+  font-weight: normal;
+  color: #333;
+}
+
 .header:hover,
 .header.active, .headactive .header {
   background: rgba(255, 255, 255, 0.88);
@@ -660,10 +665,17 @@ img {
   display: none;
 }
 
+.menu {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
 .menu li {
   display: inline-block;
   padding: 0 10px;
   font-size: 16px;
+  white-space: nowrap;
 }
 
 .menu a {

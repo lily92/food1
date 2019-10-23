@@ -245,6 +245,7 @@ img {
       // }
     }
     li.active a{ font-weight: bold; color: #c51f21;}
+    li.active dd a{ font-weight: normal ; color: $color3;}
   }
 }
 .header:hover,
@@ -346,7 +347,8 @@ img {
 }
 
 .menu{
-  li{ display: inline-block; padding: 0 10px; font-size: 16px;}
+  display: flex; flex-wrap: nowrap; overflow-x: auto;
+  li{ display: inline-block; padding: 0 10px; font-size: 16px; white-space: nowrap;}
   a{ position: relative; padding:  15px 0; display:block;}
   a:hover,a.cur{ color: $colorr;}
   li.cur a,li:hover a{ color: $colorr;}
