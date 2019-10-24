@@ -62,14 +62,6 @@ function loadHeader(index) {
     $('#_header').html(response);
     $('.nav-line').css({'width':$(".nav-right li:eq(1)").width()})
     $(".nav-right li:eq(" + index + ")").addClass('active')
-
-    $("#_header").on("mouseenter", ".nav-right li", function () {
-      $(this).find('dl').stop().slideDown();
-    });
-
-    $("#_header").on("mouseout", ".nav-right", function () {
-      $(".nav-right li").find('dl').stop().slideUp();
-    });
     
   });
 

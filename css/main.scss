@@ -203,10 +203,12 @@ img {
     flex-wrap: nowrap;
   }
   .nav-right ul li{ position: relative;}
-  .nav-right dl{ position: absolute; width: 120%;  left: -10%; top: 88px; background: $colorf; z-index: 2; display: none;
+  .nav-right dl{ position: absolute; width: 120%;  left: -10%; top: 88px; background: $colorf; z-index: 2; transform: translateY(-500px); transition: .5s linear all;
    dd{ border-bottom: 1px solid #ececec; line-height: 30px; text-align: center;}  
    dd a{ display: block;}
   }
+  .nav-right li:hover dl{  transform: translateY(0);} 
+  .nav-right li dl dd a:hover{ color: $colorr; font-weight: bold;}
   .lang {
     white-space: nowrap;
   }
@@ -244,7 +246,10 @@ img {
       //   transition: 0.2s linear all;
       // }
     }
-    li.active a{ font-weight: bold; color: #c51f21;}
+    li.active a{ font-weight: bold; color: #c51f21; position: relative;}
+    // li.active a::after,
+    li:hover a::after{ position: absolute; content: ''; width: 120%; height: 3px; background: $colorr; left:-10%; bottom: 20px;}
+    li.active dd a::after ,li:hover dd a::after { display: none;}
     li.active dd a{ font-weight: normal ; color: $color3;}
   }
 }

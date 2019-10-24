@@ -260,7 +260,8 @@ img {
   top: 88px;
   background: #fff;
   z-index: 2;
-  display: none;
+  transform: translateY(-500px);
+  transition: .5s linear all;
 }
 
 .header .nav-right dl dd {
@@ -271,6 +272,15 @@ img {
 
 .header .nav-right dl dd a {
   display: block;
+}
+
+.header .nav-right li:hover dl {
+  transform: translateY(0);
+}
+
+.header .nav-right li dl dd a:hover {
+  color: #c51f21;
+  font-weight: bold;
 }
 
 .header .lang {
@@ -313,6 +323,21 @@ img {
 .header nav ul li.active a {
   font-weight: bold;
   color: #c51f21;
+  position: relative;
+}
+
+.header nav ul li:hover a::after {
+  position: absolute;
+  content: '';
+  width: 120%;
+  height: 3px;
+  background: #c51f21;
+  left: -10%;
+  bottom: 20px;
+}
+
+.header nav ul li.active dd a::after, .header nav ul li:hover dd a::after {
+  display: none;
 }
 
 .header nav ul li.active dd a {
