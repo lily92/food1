@@ -308,9 +308,9 @@ img {
  
 }
 /*shehui*/ 
-
 .shehui-list{
   li{ background: $colorf; margin-bottom: 60px; position: relative;}
+  li a{ display: flex;}
   .shehui-img { width: 52%; overflow: hidden;}
   .shehui-desc{ width: 48%; padding: 15px; display: flex; flex-wrap: wrap; align-content: space-around; position: relative;
     p{ width: 100%;}
@@ -411,7 +411,8 @@ img {
 .paddingb40{ padding-bottom: 40px;}
 .shehui-flex{ align-items:  center; justify-content: flex-end;}
 .shehui-wenzi{ width: 38%;}
-.index-more{ padding: 10px 20px; background: $colorr; color: $colorf;}
+.index-more{ padding: 10px 20px; background: $colorr; color: $colorf; transition: .3s linear all}
+.index-more:hover{  border: 1px solid $colorr; color: $colorr; background: $colorf}
 .fex-index-shehui{ padding: 20px 40px; align-content: space-around;
   p{ width: 100%;}
 }
