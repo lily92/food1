@@ -434,6 +434,31 @@ footer{ background: #1d1d1f; padding: 30px 10px 10px 10px;
 .swiper-pagination-bullet{ background: $colorf; opacity: .85; width: 12px; height: 12px;}
 .swiper-pagination-bullet-active{ background: $colorr;}
 
+/* 2019-12-21 new */
+.location-new{ padding-top: 20px; padding-bottom: 20px;
+  a.cur{ color: $colorr;}
+}
+.xiehui-list{
+  li{ width: 31.3%; margin: 0 1% 30px; border-bottom: 3px solid $colorr; cursor: pointer;}
+  .xiehui-name{ padding: 20px 0; background: #f9f9f9;}
+  .xiehui-master{ background:rgba($color: #c51f21, $alpha: 0.41); color: $colorf; text-align: center;  line-height: 2; opacity: 0; transition: .3s linear all;}
+  li:hover .xiehui-master{ opacity: 1;}
+  .scale { overflow: hidden;}
+  .scale img{ transition: .3s linear all;}
+  li:hover .scale img{ transform: scale(1.05);}
+}
+/* end 2019-12-21 new */
+
+@media (max-width: 768px) {
+  .xiehui-list{
+    margin-left: 0; margin-right: 0;
+    li{ width: 100%; margin: 0 0 15px; }
+    .xiehui-name{ padding: 1px 0; }
+  }
+}
+// end 2019-12-21
+
+
 @media (min-width: 768px) {
   .header {
     nav li {
